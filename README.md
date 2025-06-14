@@ -68,6 +68,9 @@ npm install
 ```
 
 3. **Ejecutar la app**
+```bash
+ng serve
+```
 
 ##  Autenticación
 La autenticación es básica (solo frontend), simulada para efectos de la prueba técnica. No se conecta a un sistema de usuarios real.
