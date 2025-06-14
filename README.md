@@ -32,18 +32,23 @@ Esta es una aplicación web para la gestión de tareas (To-Do List), desarrollad
 ## Capturas de pantalla - Ionic
 
 **Login Usuarios**
+
 ![App Screenshot](public/Captura5.JPG)
 
 **Vista principal**
+
 ![App Screenshot](public/Captura1.JPG)
 
 **Creación de tarea fállida - Validación de longitud en campo**
+
 ![App Screenshot](public/Captura2.JPG)
 
 **Creación de tarea**
+
 ![App Screenshot](public/Captura3.JPG)
 
 **Actualización de una tarea**
+
 ![App Screenshot](public/Captura4.JPG)
 
 
