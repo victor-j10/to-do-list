@@ -84,6 +84,10 @@ Las tareas se obtienen desde MockAPI.io, simulando una API REST. Cada tarea tien
 }
 ```
 
+## App desplegada
+
+Utilicé Vercel para desplegar la app, si deseas probarla te dejo el link a continuación: https://to-do-list-mu-six-87.vercel.app
+
 ## Usuarios de prueba
 
 Para iniciar sesión te dejo los siguientes usuarios:
