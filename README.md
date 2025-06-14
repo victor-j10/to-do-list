@@ -1,59 +1,69 @@
-# TodoList
+# To-Do App con Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
+Esta es una aplicación web para la gestión de tareas (To-Do List), desarrollada como prueba técnica para un puesto de desarrollador frontend junior. Permite crear, leer, actualizar y eliminar tareas, además de filtrarlas por estado.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologías utilizadas
 
+- **Angular** 18
+- **TypeScript**
+- **SCSS**
+- **MockAPI** para simular API REST
+- **Angular Material** para UI (filtros, inputs, etc.)
+
+---
+
+## Funcionalidades principales
+
+✅ CRUD de tareas:  
+&nbsp;&nbsp;&nbsp;&nbsp;• Crear nuevas tareas  
+&nbsp;&nbsp;&nbsp;&nbsp;• Editar estado o contenido  
+&nbsp;&nbsp;&nbsp;&nbsp;• Eliminar tareas  
+&nbsp;&nbsp;&nbsp;&nbsp;• Listado de tareas por tarjetas  
+
+✅ Filtros por estado (Pendiente, En Progreso, Finalizada)  
+✅ Búsqueda por título  
+✅ Autenticación básica (inicio y cierre de sesión)  
+✅ Interfaz responsive y moderna
+
+---
+
+## Capturas de pantalla
+
+![App Screenshot](ruta/a/la/captura.png)
+
+---
+
+## Instalación y ejecución
+
+1. **Clonar el repositorio**
 ```bash
-ng serve
+git clone https://github.com/victor-j10/to-do-list.git
+cd to-do-list
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. **Instalar las dependencias**
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. **Ejecutar la app**
+
+##  Autenticación
+La autenticación es básica (solo frontend), simulada para efectos de la prueba técnica. No se conecta a un sistema de usuarios real.
+
+## API
+Las tareas se obtienen desde MockAPI.io, simulando una API REST. Cada tarea tiene:
 
 ```bash
-ng generate --help
+{
+  "id": "string",
+  "title": "string",
+  "description": "string",
+  "status": "Pendiente | En Progreso | Finalizada"
+}
 ```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Autor
+Desarrollado por Victor Hernandez como una prueba técnica.
