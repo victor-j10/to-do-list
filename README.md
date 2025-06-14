@@ -29,9 +29,23 @@ Esta es una aplicación web para la gestión de tareas (To-Do List), desarrollad
 
 ---
 
-## Capturas de pantalla
+## Capturas de pantalla - Ionic
 
-![App Screenshot](ruta/a/la/captura.png)
+**Login Usuarios**
+![App Screenshot](public/Captura5.JPG)
+
+**Vista principal**
+![App Screenshot](public/Captura1.JPG)
+
+**Creación de tarea fállida - Validación de longitud en campo**
+![App Screenshot](public/Captura2.JPG)
+
+**Creación de tarea**
+![App Screenshot](public/Captura3.JPG)
+
+**Actualización de una tarea**
+![App Screenshot](public/Captura4.JPG)
+
 
 ---
 
@@ -64,6 +78,20 @@ Las tareas se obtienen desde MockAPI.io, simulando una API REST. Cada tarea tien
   "status": "Pendiente | En Progreso | Finalizada"
 }
 ```
+
+## Usuarios de prueba
+
+Para iniciar sesión te dejo los siguientes usuarios:
+
+| Email              | Contraseña |
+|--------------------|------------|
+| luis@prueba.com    | luis123    |
+| ana@prueba.com     | ana123     |
+| jose@prueba.com    | jose123    |
+| mateo@prueba.com   | mateo123   |
+| daniel@prueba.com  | daniel123  |
+
+
 
 ## Autor
 Desarrollado por Victor Hernandez como una prueba técnica.
