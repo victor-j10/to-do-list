@@ -40,3 +40,23 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment files (si tenés variables de entorno)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+
+# Mac-specific
+.AppleDouble
+.LSOverride
+
+# Windows-specific
+ehthumbs.db
+Desktop.ini
+
+# VSCode (si usás otros archivos de workspace)
+!.vscode/*.code-workspace

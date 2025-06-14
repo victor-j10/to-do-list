@@ -1,0 +1,31 @@
+<div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-card">
+        <h2>{{ isEdit ? 'Editar' : 'Crear' }} Tarea</h2>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Título</mat-label>
+            <input matInput formControlName="title" />
+            <mat-error *ngIf="form.get('title')?.hasError('required')">El título es obligatorio</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+            <mat-error *ngIf="form.get('description')?.hasError('required')">La descripción es obligatoria</mat-error>
+            <mat-error *ngIf="form.get('description')?.hasError('minlength')">Mínimo 10 caracteres</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Estado</mat-label>
+            <mat-select formControlName="status">
+                <mat-option value="Pendiente">Pendiente</mat-option>
+                <mat-option value="En Progreso">En Progreso</mat-option>
+                <mat-option value="Finalizada">Finalizada</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+            {{ isEdit ? 'Actualizar' : 'Crear' }} Tarea
+        </button>
+    </form>
+</div>

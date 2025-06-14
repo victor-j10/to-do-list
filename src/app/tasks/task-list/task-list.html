@@ -1,0 +1,52 @@
+<div class="task-list-container">
+    <h2>🗂️ Tus Tareas</h2>
+    <div class="task-list-header">
+        <button mat-raised-button class="btn-primary" (click)="addTask()">
+            <mat-icon>add</mat-icon> Nueva tarea
+        </button>
+        <button mat-raised-button class="btn-primary" (click)="logout()">
+            <mat-icon>logout</mat-icon> Cerrar Sesión
+        </button>
+    </div>
+
+    <div class="filters">
+        <mat-form-field appearance="outline">
+            <mat-label>🔍 Buscar</mat-label>
+            <input matInput [(ngModel)]="searchText" (ngModelChange)="onSearchChange()"
+                placeholder="Título o descripción" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>📌 Estado</mat-label>
+            <mat-select [(value)]="selectedStatus" (selectionChange)="onStatusChange()">
+                <mat-option value="Todos">Todos</mat-option>
+                <mat-option value="Pendiente">Pendiente</mat-option>
+                <mat-option value="En Progreso">En Progreso</mat-option>
+                <mat-option value="Finalizada">Finalizada</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="task-cards">
+        <div class="task-card" *ngFor="let task of filteredTasks">
+            <h3>{{ task.title }}</h3>
+            <div class="info-list">
+                <div class="info-item">
+                    <span>Descripción: {{ task.description }}</span>
+                </div>
+                <div class="info-item">
+                    <span>Estado:
+                        <span class="status-badge {{ task.status.toLowerCase().replace(' ', '-') }}">
+                            <p>{{ task.status }}</p>
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="task-actions">
+                <button class="btn update" (click)="editTask(task)">Actualizar</button>
+                <button class="btn delete" (click)="deleteTask(task.id)">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>

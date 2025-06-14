@@ -1,0 +1,215 @@
+.task-list-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+
+  .task-list-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    justify-content: end;
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .btn-primary:first-child {
+      background-color: #2563eb;
+    }
+
+    .btn-primary {
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 0.5rem 1.1rem;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-left: 1rem;
+
+      mat-icon {
+        font-size: 18px;
+        margin-right: 6px;
+      }
+
+      &:hover:first-child {
+        background-color: #1d4ed8;
+        color: white;
+
+      }
+
+      &:hover {
+        background-color: rgb(255, 61, 61);
+        color: white;
+
+      }
+    }
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    mat-form-field {
+      min-width: 220px;
+      flex: 1;
+
+      .mat-form-field-flex {
+        background-color: white;
+        border-radius: 10px;
+        padding: 0 0.5rem;
+      }
+
+      .mat-form-field-outline {
+        display: none;
+      }
+    }
+  }
+
+  .task-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .task-card {
+    flex: 1 1 calc(33.333% - 1rem);
+    //max-width: calc(33.333% - 1rem);
+    background: white;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 12px;
+    padding: 1.3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease-in-out;
+    box-sizing: border-box;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #111827;
+      word-break: break-word;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.9rem;
+      color: #4b5563;
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        word-break: break-word;
+      }
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 9999px;
+      text-align: center;
+      min-width: 100px;
+
+      &.pendiente {
+        background-color: #fef3c7;
+        color: #92400e;
+      }
+
+      &.en-progreso {
+        background-color: #dbeafe;
+        color: #1e40af;
+      }
+
+      &.finalizada {
+        background-color: #dcfce7;
+        color: #166534;
+      }
+    }
+
+
+    .task-actions {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.6rem;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: 0.2s;
+
+      &.success {
+        background-color: #22c55e;
+        color: white;
+      }
+
+      &.update {
+        background-color: #2563eb;
+        ;
+        border-color: none;
+        color: white;
+      }
+
+      &.delete {
+        background-color: red;
+        border-color: none;
+        color: white;
+      }
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .task-card {
+      flex: 1 1 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .task-card {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .filters {
+      flex-direction: column;
+
+      mat-form-field {
+        min-width: 100%;
+      }
+    }
+  }
+
+}
